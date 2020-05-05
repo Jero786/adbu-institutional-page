@@ -4,10 +4,11 @@
 	@include article();
 
 	background: url('https://ik.imagekit.io/cdnstorage786/learn-more-bg_XiqiAkUEb.svg') no-repeat center center fixed;
-	@include bp(xs) {
-		background: url('https://ik.imagekit.io/cdnstorage786/learn-more-bg_XiqiAkUEb.svg') center;
-	}
 	background-size: cover;
+	@include bp(xs) {
+		background: url('/static/images/learn-more-xs.png') no-repeat center;
+		background-size: cover;
+	}
 
 	&__title {
 		color: #fff;
