@@ -1,0 +1,53 @@
+@import '../../commons/commons';
+
+.adbu-top-header-bar {
+
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	transition: all .5s;
+
+	&.is-sticky {
+		background-color: rgba(0, 0, 0, 0.68);
+
+		.adbu-top-header-bar__logo {
+		}
+
+	}
+
+	&__logo {
+		background: url('/static/images/logo-white.svg') no-repeat;
+		padding: 40px;
+		position: absolute;
+		z-index: 10;
+		top: 37px;
+		left: 50px;
+		transition: all .5s;
+
+		@include bp(xs) {
+			top: 25px;
+			left: 30px;
+		}
+	}
+
+	&__burger {
+		background: url('/static/images/menu-three-lines.svg') no-repeat;
+		padding: 15px;
+		position: absolute;
+		z-index: 10;
+		top: 50px;
+		right: 50px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.is-open {
+			background: url('/static/images/menu-lines-open.svg') no-repeat;
+		}
+	}
+}

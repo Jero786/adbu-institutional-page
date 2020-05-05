@@ -1,0 +1,68 @@
+@import '../../../commons/commons';
+
+$max-content-width: 920px;
+
+.contact-us {
+	background: url("https://ik.imagekit.io/cdnstorage786/table-computer-bg_t1NUYn6fc.svg") no-repeat center center fixed;
+	background-size: cover;
+	@include bp(xs) {
+		background: url("https://ik.imagekit.io/cdnstorage786/table-computer-bg_t1NUYn6fc.svg") center;
+	}
+
+	@include bp(xs) {
+		background-position-x: -800px;
+	}
+
+	&__header {
+		margin: 0 auto;
+		color: $white;
+		max-width: $max-content-width;
+		text-align: center;
+
+		&-title {
+			@include padding-text();
+			font-size: 4em;
+			margin-bottom: -1em;
+		}
+
+		&-description {
+			font-size: 2em;
+			font-weight: 100;
+			padding: 2em 7% 5.5em 7%;
+		}
+	}
+
+	&__body {
+		margin: 0 auto;
+		@include center();
+		color: $white;
+		padding: 2em 2em 7em 2em;
+		background-color: rgba(0, 0, 0, 0.34901960784313724);
+
+		@include bp(xs) {
+			flex-wrap: wrap;
+		}
+
+		&-half-side {
+			width: 45%;
+			text-align: center;
+
+			@include bp(xs) {
+				width: 90%;
+			}
+		}
+
+		&-title {
+			font-size: 2em;
+			padding: 2em;
+		}
+
+		&-submit {
+		}
+	}
+
+	&__footer {
+		//background: url("/static/images/map-bg.png") fixed;
+		//height: 40vh;
+	}
+}

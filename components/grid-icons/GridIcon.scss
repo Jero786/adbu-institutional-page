@@ -1,0 +1,24 @@
+@import "../../commons/commons";
+
+.grid-icon {
+
+	padding: 4em;
+
+	&__icon {
+		overflow: hidden;
+		background-size: cover;
+		height: 150px;
+		width: 150px;
+		padding: 1em;
+	}
+
+	&__title {
+		background-color: white;
+		padding: 1em;
+		text-align: center;
+		font-size: 1.4em;
+	}
+
+	&__body {
+	}
+}

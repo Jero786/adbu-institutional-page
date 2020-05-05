@@ -1,0 +1,114 @@
+@import '../../../commons/commons';
+
+.studios {
+
+	@include article();
+
+	&__title {
+		color: $matisse;
+		font-size: 4em;
+		font-weight: 100;
+		padding-top: 2em;
+
+		@include bp(xs) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__description {
+		text-align: center;
+		padding: 0 7% 2em 7%;
+		color: $gray;
+		font-size: 1.7em;
+		font-weight: 100;
+		margin: 0;
+
+		@include bp(xs) {
+			font-size: 2em;
+			padding-top: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.grid-icon {
+			color: $gray;
+			font-size: 1.2em;
+
+			@include center();
+			flex-direction: column;
+
+			@include bp(lg) {
+				padding: 2em;
+			}
+
+			@include bp(md) {
+				padding: 1.5em;
+			}
+
+			@include bp(sm) {
+				padding: 1em;
+			}
+
+			@include bp(xs) {
+				padding: 1.2em;
+			}
+		}
+
+		@include padding-text();
+
+		padding-top: 0;
+	}
+
+	&__header {
+
+	}
+
+	&__footer {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+
+		&-header {
+			font-size: 2em;
+			color: #fff;
+			font-weight: 100;
+
+			background: url("https://ik.imagekit.io/cdnstorage786/home-header_WMfOfpinc.svg") no-repeat center center fixed;
+			background-size: cover;
+			@include padding-text();
+
+			padding-top: 4em;
+			padding-bottom: 4em;
+
+			@include bp(xs) {
+				width: initial;
+				font-size: 1.5em;
+				text-align: center;
+			}
+		}
+
+		&-content {
+			height: 50vh;
+			@include center();
+
+			@include bp(xs) {
+				height: 40vh;
+			}
+
+			img {
+				height: 30vh;
+				@include bp(sm) {
+					height: 20vw;
+				}
+				@include bp(xs) {
+					height: 25vw;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,99 @@
+@import '../../../commons/commons';
+
+.organization-manifest {
+	@include article();
+
+	position: relative;
+
+	.img-computer {
+		position: absolute;
+		left: -20vw;
+		height: 15vw;
+
+		@include bp(xs) {
+			display: none;
+		}
+	}
+
+	.img-phone {
+		position: absolute;
+		right: 5%;
+		bottom: -40px;
+		height: 30vw;
+		z-index: -1;
+	}
+
+	&__title {
+		color: $white;
+		font-size: 4em;
+		font-weight: 100;
+		padding-top: 2em;
+		z-index: 5;
+	}
+
+	&__description {
+		display: flex;
+		z-index: 5;
+		color: $white;
+
+		@include bp(xs) {
+			flex-direction: column;
+		}
+
+		ul, li {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			text-align: left;
+		}
+
+		li {
+			padding: 1em;
+			font-size: 1.5em;
+
+			&:before {
+				margin-right: .5em;
+				content: '';
+				background: url('/static/images/check-v2.svg') no-repeat center center ;
+				background-size: 1.8em;
+				padding: 1em;
+				height: 9em;
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 7em;
+		background: url('https://ik.imagekit.io/cdnstorage786/home-header_NG71Lljqt.svg') no-repeat center center fixed;
+		@include bp(xs) {
+			background: url('https://ik.imagekit.io/cdnstorage786/home-header_NG71Lljqt.svg') center;
+		}
+		background-size: cover;
+		align-items: center;
+		text-align: center;
+		color: $white;
+		font-weight: 100;
+
+		width: 100%;
+	}
+
+	&__button {
+		z-index: 5;
+	}
+
+	&__bg {
+		position: absolute;
+		background: url('https://ik.imagekit.io/cdnstorage786/agile-banner_4j5JpjhjM.svg') no-repeat center center fixed;
+		background-size: cover;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		filter: blur(9px);
+		opacity: .8;
+	}
+
+}

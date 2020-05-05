@@ -1,0 +1,42 @@
+@import '../../../commons/commons';
+
+.learn-more {
+	@include article();
+
+	background: url('https://ik.imagekit.io/cdnstorage786/learn-more-bg_XiqiAkUEb.svg') no-repeat center center fixed;
+	@include bp(xs) {
+		background: url('https://ik.imagekit.io/cdnstorage786/learn-more-bg_XiqiAkUEb.svg') center;
+	}
+	background-size: cover;
+
+	&__title {
+		color: #fff;
+		font-size: 4em;
+		font-weight: 100;
+		padding-top: 2em;
+		margin-bottom: -.5em;
+	}
+
+	&__description {
+		@include description-article();
+		@include padding-text();
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 7em;
+
+		align-items: center;
+		text-align: center;
+		color: $white;
+		max-width: 600px;
+
+		width: 100%;
+	}
+
+	&__button {
+	}
+
+}
